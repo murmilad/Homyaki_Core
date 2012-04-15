@@ -3,8 +3,6 @@ package Homyaki::String;
 use strict;
 
 sub handle_template {
-	my $class = shift;
-
 	my %h = @_;
 	my $template_path = $h{template_path};
 	my $parameters    = $h{parameters} || {};
