@@ -1,11 +1,21 @@
 package Homyaki::Imager;
 
+
+use vars qw(@EXPORT_OK);
+
 use Imager;
 
 use constant ORIENTATIONS => {
 	6 => 90,
 	8 => 270
 };
+
+@EXPORT_OK = qw(
+	put_watermark
+	change_size
+	rotate
+	get_tag_data
+);
 
 sub put_watermark {
 	my $img             = shift;
