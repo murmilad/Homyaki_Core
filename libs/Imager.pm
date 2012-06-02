@@ -1,6 +1,19 @@
 package Homyaki::Imager;
+use strict;
+use vars qw(@ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
+
+require Exporter;
+@ISA = qw(Exporter);
 
 use Imager;
+
+@EXPORT_OK = qw(
+	put_watermark
+	change_size
+	rotate
+	get_tag_data
+);
+
 
 use constant ORIENTATIONS => {
 	6 => 90,
