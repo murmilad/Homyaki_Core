@@ -1,6 +1,14 @@
 package Homyaki::String;
 
 use strict;
+use vars qw(@ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
+
+require Exporter;
+@ISA = qw(Exporter);
+
+@EXPORT_OK = qw(
+	handle_template
+);
 
 sub handle_template {
 	my %h = @_;
