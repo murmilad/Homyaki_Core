@@ -20,8 +20,8 @@ sub handle_template {
 		while (my $string = <TEMPLATE>) {
 			foreach my $parameter (keys %{$parameters}){
 				$string =~ s/\%$parameter\%/$parameters->{$parameter}/g;
-				$result .= $string;
 			}
+			$result .= $string;
 		}
 	}
 
